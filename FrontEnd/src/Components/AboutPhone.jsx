@@ -3,10 +3,10 @@ import AboutPhn from './AboutPhn.jpg'
 import {Link} from 'react-router-dom'
 export default function AboutPhone() {
   return (
-    <div className='text-white bg-black w-full max-h-full '>
+    <div className='text-white bg-black w-full h-full pb-9'>
       <div className="bg-black text-white text-center text-4xl py-16">About Phone</div>
       <div className='flex justify-between mx-4'>
-        <div className='text-white m-2'><i class="fas fa-arrow-left"></i></div>
+        <div className='text-white m-2'><Link to={'/'}><i class="fas fa-arrow-left"></i></Link></div>
         <div><i className="fa-solid fa-magnifying-glass p-2 m-2wh text-white right border-white shadow-md rounded-full bg-neutral-800"></i></div>
       </div>
 
@@ -54,7 +54,6 @@ export default function AboutPhone() {
                   <Link to={'/'}> <div className='text-white p-4'>Software Information</div></Link>
                   <hr  className='mx-4'/>
                   <Link to={'/'}> <div className='text-white p-4'>Battery Information</div></Link>
-                  <hr  className='mx-4'/>
         </div>
       </div>
 

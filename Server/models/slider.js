@@ -1,15 +1,15 @@
 const mongoose=require ("../database/dbConnect");
 
-const SettingsSchema=new mongoose.Schema({
+const SliderSchema=new mongoose.Schema({
     name:{
         type:String,
         required:true
     },
     value:{
-        type:Boolean,
+        type:Number,
         required:true
     }
 });
 
-const Setting=mongoose.model("Setting",SettingsSchema);
-module.exports=Setting;
+const Slider=mongoose.model("Slider",SliderSchema);
+module.exports=Slider;
