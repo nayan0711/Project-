@@ -24,68 +24,68 @@ export default function Connections() {
       const response_Bluthooth = await axios.get(
         "http://localhost:5000/6538d920b745488197e0ff66"
       );
-      SetAutomaticRestore3(response_WIFI.data.value);
+      SetAutomaticRestore3(response_Bluthooth.data.value);
       const response_Flight = await axios.get(
         "http://localhost:5000/6538dc6979020246b4ec4ba4"
       );
-      SetAutomaticRestore4(response_WIFI.data.value);
+      SetAutomaticRestore4(response_Flight.data.value);
       const response_Hotspot = await axios.get(
         "http://localhost:5000/6538dcf779020246b4ec4ba5"
       );
-      SetAutomaticRestore5(response_WIFI.data.value);
+      SetAutomaticRestore5(response_Hotspot.data.value);
     };
     fatchData();
   },[]);
 
   const handleToggle1 = async () => {
     SetAutomaticRestore1(!automaticRestore1);
-    const response = await axios.patch(
+    const response_WIFI = await axios.patch(
       "http://localhost:5000/6538d09d52bf1b49a387e3b7",
       {
         value: !automaticRestore1,
       }
     );
-    console.log(response);
+    console.log(response_WIFI);
   };
   const handleToggle2 = async () => {
     SetAutomaticRestore2(!automaticRestore2);
-    const response = await axios.patch(
+    const response_WIFICALL = await axios.patch(
       "http://localhost:5000/6538d2cf5989dcece39bcb3e",
       {
         value: !automaticRestore2,
       }
     );
-    console.log(response);
+    console.log(response_WIFICALL);
   };
   const handleToggle3 = async () => {
     SetAutomaticRestore3(!automaticRestore3);
-    const response = await axios.patch(
-      "http://localhost:5000/6538d2cf5989dcece39bcb3e",
+    const response_Bluthooth = await axios.patch(
+      "http://localhost:5000/6538d920b745488197e0ff66",
       {
         value: !automaticRestore3,
       }
     );
-    console.log(response);
+    console.log(response_Bluthooth);
   };
   const handleToggle4 = async () => {
     SetAutomaticRestore4(!automaticRestore4);
-    const response = await axios.patch(
+    const response_Flight = await axios.patch(
       "http://localhost:5000/6538dc6979020246b4ec4ba4",
       {
         value: !automaticRestore4,
       }
     );
-    console.log(response);
+    console.log(response_Flight);
   };
   const handleToggle5 = async () => {
     SetAutomaticRestore5(!automaticRestore5);
-    const response = await axios.patch(
+    const response_Hotspot = await axios.patch(
       "http://localhost:5000/6538dcf779020246b4ec4ba5",
       {
         value: !automaticRestore5,
       }
     );
-    console.log(response);
+    console.log(response_Hotspot);
   };
 
   return (
